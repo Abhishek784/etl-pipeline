@@ -1,0 +1,19 @@
+# Local virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Pytest
+.pytest_cache/
+
+# Ruff
+.ruff_cache/
+
+AGENTS.md
+ARCHITECTURE.md
+requirements.txt
+
+# Mypy
+.mypy_cache/
