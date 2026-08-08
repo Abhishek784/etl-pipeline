@@ -17,3 +17,6 @@ requirements.txt
 
 # Mypy
 .mypy_cache/
+
+# Packaging metadata
+*.egg-info/
