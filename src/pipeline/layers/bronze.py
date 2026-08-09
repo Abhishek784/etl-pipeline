@@ -12,6 +12,7 @@ def load_bronze_articles(csv_path: Path, batch_id: str) -> pd.Dataframe :
     df["source_file"] = csv_path.name
     df["batch_id"] = batch_id
     df["ingested_at"] = datetime.now(timezone.utc)
+    df["source_row_num"] = range(len(df))
     return df
 
 
