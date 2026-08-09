@@ -5,7 +5,7 @@ from pathlib import Path
 import argparse, json
 import pandas as pd
 
-from pipeline.layers import bronze, silver, gold
+from pipeline.layers import bronze, silver, gold, ai_exports
 from pipeline.cleaning.categories import build_category_lookup
 from pipeline.cleaning.companies import build_registry
 from pipeline.config import (
@@ -31,7 +31,7 @@ def run_pipeline(batch_id: str | None = None, skip_embeddings: bool = False) -> 
     registry   = build_registry(
         list(metadata),
         aliases=load_company_aliases(),
-        lossy_aliases=set(settings.get("lossy_aliases", [])),
+        lossy_aliases=set(settings["company_matching"].get("lossy_aliases", [])),
     )
 
     paths = settings["paths"]
@@ -50,6 +50,12 @@ def run_pipeline(batch_id: str | None = None, skip_embeddings: bool = False) -> 
         "fact_arr_observation": gold.build_fact_arr_observation(s_articles, dim_company, batch_id),
         "quarantine_record": gold.build_quarantine_record(s_articles, batch_id),
     }
+    tables["ai_articles_enriched"] = ai_exports.build_ai_articles_enriched(
+        tables["fact_arr_observation"],
+        tables["dim_article"],
+        tables["dim_company"],
+        settings,
+    )
 
     return PipelineResult(s_articles, s_companies, tables, batch_id)
 

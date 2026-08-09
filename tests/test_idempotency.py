@@ -24,14 +24,14 @@ def test_same_tables_produced(two_runs):
 
 
 def test_row_counts_unchanged(two_runs):
-    """A rerun must not append duplicates."""
+    #A rerun must not append duplicates.
     first, second = two_runs
     for name in first:
         assert len(first[name]) == len(second[name]), f"{name} changed row count"
 
 
 def test_primary_keys_identical(two_runs):
-    """Content hashes must not depend on run order, time, or batch."""
+    #Content hashes must not depend on run order, time, or batch.
     first, second = two_runs
     pks = {
         "dim_company": "company_key",
@@ -44,7 +44,7 @@ def test_primary_keys_identical(two_runs):
 
 
 def test_business_content_identical(two_runs):
-    """Everything except audit metadata must match exactly."""
+    #Everything except audit metadata must match exactly.
     first, second = two_runs
     for name in first:
         pd.testing.assert_frame_equal(
@@ -55,7 +55,7 @@ def test_business_content_identical(two_runs):
 
 
 def test_csv_export_is_byte_identical(two_runs, tmp_path):
-    """The deliverable itself, not just the in-memory frames."""
+    #The deliverable itself, not just the in-memory frames
     from pipeline.exports import export_tables
     first, second = two_runs
     a = export_tables({k: _business_content(v) for k, v in first.items()}, tmp_path / "a")
