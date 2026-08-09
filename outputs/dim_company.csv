@@ -1,0 +1,22 @@
+company_key,company_name,industry_raw,industry_std,founded_year,headquarters,employee_count,company_size_category,is_public,stock_ticker
+0053c79ac2b8060a,Uber,FinTech,FINTECH,2015,"San Francisco, CA",10144,Medium,False,UBER
+01d1347202f9d160,Cloudflare,Cybersecurity,CYBERSEC,1998,"Austin, TX",4422,Small,False,CLOU
+10c8bf3d1264efe9,NVIDIA,AI/ML,AI_ML,2017,"London, UK",22031,Medium,False,
+2fb982d0e0f54e89,Tesla,Cloud Computing,CLOUD,2008,"London, UK",5691,Small,True,
+3c7de6fb4ac45663,Google DeepMind,Data Analytics,DATA,2017,"Austin, TX",24274,Medium,False,
+42a286e6bf863c7d,Stripe,Data Analytics,DATA,2002,"Seattle, WA",36348,Large,True,STRI
+524afd4c0fc5ca4f,Amazon Web Services,SaaS,CLOUD,2015,"Berlin, Germany",27826,Medium,False,
+569a3378224f0856,OpenAI,Data Analytics,DATA,2006,"Austin, TX",12793,Medium,False,OPEN
+56baeba4f76f7b5f,Palantir,Cloud Computing,CLOUD,2005,"Berlin, Germany",42306,Large,True,
+62269e661965e40c,DataRobot,Cloud Computing,CLOUD,2012,"New York, NY",23471,Medium,True,
+69b1b6087ce00dad,SpaceX,AI/ML,AI_ML,2016,"Berlin, Germany",31018,Large,False,
+6e06c972a9911c0d,Anthropic,FinTech,FINTECH,2006,"San Francisco, CA",43747,Large,False,
+6feb65f1f31ac009,Meta AI,Data Analytics,DATA,2001,"Seattle, WA",20240,Medium,True,
+73302ba5dd85f6a2,MongoDB,SaaS,CLOUD,2008,"Austin, TX",16952,Medium,False,MONG
+bc082590153cc57d,Confluent,Cloud Computing,CLOUD,1995,"London, UK",3884,Small,False,
+c0aaf8e6dcad202a,Snowflake,Cloud Computing,CLOUD,2012,"London, UK",49545,Large,True,
+d4ba83def8849af6,Airbnb,Data Analytics,DATA,1999,"London, UK",19967,Medium,False,
+d8aa559acd42fa29,Elastic,Cybersecurity,CYBERSEC,2016,"San Francisco, CA",24508,Medium,True,ELAS
+dfcafa5be73568ae,Databricks,Data Analytics,DATA,2003,"Berlin, Germany",17962,Medium,True,DATA
+e08516ed2f0a45ec,Microsoft,Data Analytics,DATA,2018,"Austin, TX",48646,Large,False,
+fa6bad2933b44844,Scale AI,AI/ML,AI_ML,2003,"Berlin, Germany",23379,Medium,False,

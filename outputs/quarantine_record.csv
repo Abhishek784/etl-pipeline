@@ -1,0 +1,218 @@
+quarantine_id,source_file,source_row_num,article_id,failure_stage,failure_reason,raw_value,best_candidate,match_score,batch_id
+c6989422d94d1a89,tech_news.csv,0,ART0001,arr_parse,missing,,,,BATCH_20260809T150235
+c460146810f20822,tech_news.csv,2,ART0003,arr_parse,missing,,,,BATCH_20260809T150235
+995e019a553a2bc5,tech_news.csv,4,ART0005,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+197f7e8075ef03f2,tech_news.csv,7,ART0008,arr_parse,missing,,,,BATCH_20260809T150235
+c9add148278d7c28,tech_news.csv,11,ART0012,arr_parse,missing,N/A,,,BATCH_20260809T150235
+d1de62a540876ccd,tech_news.csv,17,ART0018,arr_parse,missing,,,,BATCH_20260809T150235
+d1f8a1c64b455b0a,tech_news.csv,24,ART0025,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+64bc536f5961dd3e,tech_news.csv,25,ART0026,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+a7a9b3da9d5c2856,tech_news.csv,26,ART0027,arr_parse,missing,,,,BATCH_20260809T150235
+75d86cbe57823216,tech_news.csv,29,ART0030,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+5aee7981b02198ee,tech_news.csv,31,ART0032,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+10db4867cd2589e8,tech_news.csv,34,ART0035,arr_parse,missing,N/A,,,BATCH_20260809T150235
+4c2c516dc0686823,tech_news.csv,36,ART0037,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+86da5a5a58c7ca19,tech_news.csv,41,ART0042,arr_parse,missing,N/A,,,BATCH_20260809T150235
+efc80b6fcb2d5cf8,tech_news.csv,42,ART0043,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+9b2c77dc0f3a941f,tech_news.csv,43,ART0044,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+1122be820181bb41,tech_news.csv,46,ART0047,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+724fd687e41fcfa3,tech_news.csv,47,ART0048,arr_parse,missing,,,,BATCH_20260809T150235
+8bca62f15aae10b5,tech_news.csv,49,ART0050,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+0120220598173b38,tech_news.csv,51,ART0052,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+81b0459261528106,tech_news.csv,56,ART0057,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+46338ea21851d789,tech_news.csv,61,ART0062,arr_parse,missing,,,,BATCH_20260809T150235
+311a3a3bef8d5d42,tech_news.csv,62,ART0063,arr_parse,missing,,,,BATCH_20260809T150235
+c710fbf65a4a4e11,tech_news.csv,63,ART0064,arr_parse,missing,,,,BATCH_20260809T150235
+ad4145d56689b693,tech_news.csv,64,ART0065,arr_parse,missing,,,,BATCH_20260809T150235
+4e2367c8df6a7710,tech_news.csv,66,ART0067,arr_parse,missing,N/A,,,BATCH_20260809T150235
+a6d90caac96390c2,tech_news.csv,75,ART0076,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+0ccffc5047d770ae,tech_news.csv,82,ART0083,arr_parse,missing,,,,BATCH_20260809T150235
+8d4c503a61210682,tech_news.csv,83,ART0084,arr_parse,missing,N/A,,,BATCH_20260809T150235
+e624ca76ac520504,tech_news.csv,88,ART0089,arr_parse,missing,,,,BATCH_20260809T150235
+fcb6b61a0d1a66b3,tech_news.csv,91,ART0092,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+5f9c73736ec095e6,tech_news.csv,94,ART0095,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+1778930dbb826749,tech_news.csv,97,ART0098,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+d9f7391f807de524,tech_news.csv,102,ART0103,arr_parse,missing,,,,BATCH_20260809T150235
+3dad85ad62fe1feb,tech_news.csv,104,ART0105,arr_parse,missing,,,,BATCH_20260809T150235
+48ade85026651ec6,tech_news.csv,105,ART0106,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+f96f6551475a39bb,tech_news.csv,106,ART0107,arr_parse,missing,,,,BATCH_20260809T150235
+582d32f297529c83,tech_news.csv,109,ART0110,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+a8ebcc4795646dcc,tech_news.csv,110,ART0111,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+92daf81dfb311029,tech_news.csv,122,ART0123,arr_parse,missing,,,,BATCH_20260809T150235
+612eb1ce2b58953e,tech_news.csv,124,ART0125,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+62ff724ce6075357,tech_news.csv,126,ART0127,arr_parse,missing,,,,BATCH_20260809T150235
+e2c943ed89e2cb71,tech_news.csv,133,ART0134,arr_parse,missing,,,,BATCH_20260809T150235
+941c46c7cc0e61f4,tech_news.csv,134,ART0135,arr_parse,missing,,,,BATCH_20260809T150235
+b15dc35bdf97df8d,tech_news.csv,135,ART0136,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+ffcb4a3af002f95c,tech_news.csv,138,ART0139,arr_parse,missing,N/A,,,BATCH_20260809T150235
+587e56db3c396dca,tech_news.csv,139,ART0140,arr_parse,missing,,,,BATCH_20260809T150235
+d2b397d555538c73,tech_news.csv,142,ART0143,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+70ccef7537ec267b,tech_news.csv,144,ART0145,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+74630d52a69a5530,tech_news.csv,145,ART0146,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+ae9cc0461576df09,tech_news.csv,147,ART0148,arr_parse,missing,N/A,,,BATCH_20260809T150235
+1e67a183398b9c9e,tech_news.csv,149,ART0150,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+d60cf60379df5782,tech_news.csv,150,ART0151,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+b22ac8bbc195db80,tech_news.csv,151,ART0152,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+58e1c6a0d1dfa080,tech_news.csv,152,ART0153,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+f986219a5c8d5470,tech_news.csv,153,ART0154,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+006433504c163de5,tech_news.csv,155,ART0156,arr_parse,missing,,,,BATCH_20260809T150235
+3e303af4cc823766,tech_news.csv,159,ART0160,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+f759e49a6821b6b6,tech_news.csv,161,ART0162,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+889c3ec93dac2dd1,tech_news.csv,163,ART0164,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+7a1ba0c17a0a9cc2,tech_news.csv,165,ART0166,arr_parse,missing,,,,BATCH_20260809T150235
+3dfd080c23885bc7,tech_news.csv,166,ART0167,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+e31c0aa971a073b6,tech_news.csv,170,ART0171,arr_parse,missing,,,,BATCH_20260809T150235
+b38a4dfc65c90d30,tech_news.csv,173,ART0174,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+a270422e150b9930,tech_news.csv,175,ART0176,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+703a516576c6472d,tech_news.csv,177,ART0178,arr_parse,missing,,,,BATCH_20260809T150235
+082d0a0bcd961d2d,tech_news.csv,181,ART0182,arr_parse,missing,,,,BATCH_20260809T150235
+14a40e31b94bc481,tech_news.csv,182,ART0183,arr_parse,missing,,,,BATCH_20260809T150235
+40ed804270d6c9d9,tech_news.csv,189,ART0190,arr_parse,missing,,,,BATCH_20260809T150235
+54a5d043cef78ae2,tech_news.csv,190,ART0191,arr_parse,missing,,,,BATCH_20260809T150235
+979ed6108353d6a1,tech_news.csv,192,ART0193,arr_parse,missing,,,,BATCH_20260809T150235
+4d49f54a9cd17556,tech_news.csv,193,ART0194,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+89af227b0a6a0801,tech_news.csv,194,ART0195,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+fec7441aeb1999a4,tech_news.csv,195,ART0196,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+e36b7c3a2fc8c128,tech_news.csv,196,ART0197,arr_parse,missing,,,,BATCH_20260809T150235
+5e65446ec4640502,tech_news.csv,200,ART0201,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+ba07c63d76565a1d,tech_news.csv,202,ART0203,arr_parse,missing,,,,BATCH_20260809T150235
+a0a049dd362005ac,tech_news.csv,204,ART0205,arr_parse,missing,,,,BATCH_20260809T150235
+8276f27219f3a13d,tech_news.csv,207,ART0208,arr_parse,missing,,,,BATCH_20260809T150235
+f4782688b9e62761,tech_news.csv,213,ART0214,arr_parse,missing,,,,BATCH_20260809T150235
+9912c3be4c749d02,tech_news.csv,214,ART0215,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+8e70c1dc9a46d552,tech_news.csv,215,ART0216,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+dc5a248aee4414a8,tech_news.csv,217,ART0218,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+6baad1645ead5ab1,tech_news.csv,226,ART0227,arr_parse,missing,N/A,,,BATCH_20260809T150235
+8d135716869a4a7f,tech_news.csv,228,ART0229,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+5b8d3187dddc2c5b,tech_news.csv,234,ART0235,arr_parse,missing,,,,BATCH_20260809T150235
+5a1bd4df19fbd494,tech_news.csv,237,ART0238,arr_parse,missing,,,,BATCH_20260809T150235
+1819712435beb38c,tech_news.csv,243,ART0244,arr_parse,missing,,,,BATCH_20260809T150235
+be6647cbe10dde60,tech_news.csv,244,ART0245,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+a22eb08f182f9c02,tech_news.csv,247,ART0248,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+7e10483375150770,tech_news.csv,254,ART0255,arr_parse,missing,N/A,,,BATCH_20260809T150235
+692b3980efcfa223,tech_news.csv,255,ART0256,arr_parse,missing,N/A,,,BATCH_20260809T150235
+546cfe2a05bad2ba,tech_news.csv,259,ART0260,arr_parse,missing,N/A,,,BATCH_20260809T150235
+703de8b8ec9ce3cd,tech_news.csv,264,ART0265,arr_parse,missing,N/A,,,BATCH_20260809T150235
+51bb3f4f1364bcde,tech_news.csv,265,ART0266,arr_parse,missing,,,,BATCH_20260809T150235
+623eab1dade996d3,tech_news.csv,266,ART0267,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+6e6795aa3020d39a,tech_news.csv,270,ART0271,arr_parse,missing,N/A,,,BATCH_20260809T150235
+287dde4ef43cccc8,tech_news.csv,275,ART0276,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+4b251c9af290d83c,tech_news.csv,278,ART0279,arr_parse,missing,N/A,,,BATCH_20260809T150235
+8e16779be8547167,tech_news.csv,279,ART0280,arr_parse,missing,N/A,,,BATCH_20260809T150235
+5762d00c490f6f51,tech_news.csv,280,ART0281,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+9f730acba8f99779,tech_news.csv,281,ART0282,arr_parse,missing,,,,BATCH_20260809T150235
+d569280fdabad0c2,tech_news.csv,282,ART0283,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+dcaa4c2a38e93c2b,tech_news.csv,283,ART0284,arr_parse,missing,N/A,,,BATCH_20260809T150235
+a0c2e363facdb415,tech_news.csv,286,ART0287,arr_parse,missing,,,,BATCH_20260809T150235
+d7032d450cb7d798,tech_news.csv,287,ART0288,arr_parse,missing,N/A,,,BATCH_20260809T150235
+cba378e3e911e540,tech_news.csv,288,ART0289,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+8367c0c91826b0ab,tech_news.csv,290,ART0291,arr_parse,missing,,,,BATCH_20260809T150235
+f4c2781410a39528,tech_news.csv,295,ART0296,arr_parse,missing,,,,BATCH_20260809T150235
+5beed1cc7c8abe5e,tech_news.csv,296,ART0297,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+94c145ea41ffaf39,tech_news.csv,297,ART0298,arr_parse,missing,,,,BATCH_20260809T150235
+4236f6bb4e48ab97,tech_news.csv,301,ART0302,arr_parse,missing,N/A,,,BATCH_20260809T150235
+088c7089b24091ee,tech_news.csv,308,ART0309,arr_parse,missing,N/A,,,BATCH_20260809T150235
+4ed84da321ff533b,tech_news.csv,318,ART0319,arr_parse,missing,N/A,,,BATCH_20260809T150235
+7e33bc927d625e2d,tech_news.csv,322,ART0323,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+1358d353a31743c3,tech_news.csv,324,ART0325,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+fb4d8498855e0dd0,tech_news.csv,338,ART0339,arr_parse,missing,N/A,,,BATCH_20260809T150235
+792959287d12e713,tech_news.csv,341,ART0342,arr_parse,missing,N/A,,,BATCH_20260809T150235
+21d1fbd469fc5f0d,tech_news.csv,343,ART0344,arr_parse,missing,,,,BATCH_20260809T150235
+2e1fbd682e7b616d,tech_news.csv,347,ART0348,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+9474313c1663e49f,tech_news.csv,348,ART0349,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+a0e057255f58071c,tech_news.csv,352,ART0353,arr_parse,missing,N/A,,,BATCH_20260809T150235
+c18931db007cfef6,tech_news.csv,353,ART0354,arr_parse,missing,N/A,,,BATCH_20260809T150235
+2af5f26aa8140a78,tech_news.csv,355,ART0356,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+2ba435b598ce605a,tech_news.csv,360,ART0361,arr_parse,missing,,,,BATCH_20260809T150235
+30988011a9502ff6,tech_news.csv,361,ART0362,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+edacbbe960ce4b9e,tech_news.csv,365,ART0366,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+6e0707a5471ec844,tech_news.csv,371,ART0372,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+72e60e002fd924d1,tech_news.csv,378,ART0379,arr_parse,missing,,,,BATCH_20260809T150235
+7d16c950c0546592,tech_news.csv,380,ART0381,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+417726ec5298edf2,tech_news.csv,387,ART0388,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+5e2db644cee89b38,tech_news.csv,394,ART0395,arr_parse,missing,,,,BATCH_20260809T150235
+a26b1f5a019ef9d7,tech_news.csv,400,ART0401,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+aa7ee5cdef090b48,tech_news.csv,404,ART0405,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+27b47c65fa9a2479,tech_news.csv,406,ART0407,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+c9b4c6f1520dd649,tech_news.csv,408,ART0409,arr_parse,missing,,,,BATCH_20260809T150235
+e9fa695bdfce6458,tech_news.csv,413,ART0414,arr_parse,missing,,,,BATCH_20260809T150235
+03b4e37d3faa03f8,tech_news.csv,414,ART0415,arr_parse,missing,N/A,,,BATCH_20260809T150235
+075f170282e066df,tech_news.csv,416,ART0417,arr_parse,missing,N/A,,,BATCH_20260809T150235
+1d8a94e07b36a57e,tech_news.csv,418,ART0419,arr_parse,missing,N/A,,,BATCH_20260809T150235
+70b834817afba2ad,tech_news.csv,421,ART0422,arr_parse,missing,,,,BATCH_20260809T150235
+c2104fdf75aa448c,tech_news.csv,422,ART0423,arr_parse,missing,,,,BATCH_20260809T150235
+65eb4a125e37b9f7,tech_news.csv,424,ART0425,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+6c016e2ec10234d8,tech_news.csv,425,ART0426,arr_parse,missing,,,,BATCH_20260809T150235
+e63ad71d5e991478,tech_news.csv,433,ART0434,arr_parse,missing,,,,BATCH_20260809T150235
+9bd7c740f0f52f72,tech_news.csv,435,ART0436,arr_parse,missing,N/A,,,BATCH_20260809T150235
+1b57c960a85edf06,tech_news.csv,437,ART0438,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+0878ed6bb076cf01,tech_news.csv,439,ART0440,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+4c5f3b956cfe3384,tech_news.csv,443,ART0444,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+30bb34b37f4dc59c,tech_news.csv,446,ART0447,arr_parse,missing,,,,BATCH_20260809T150235
+038880170caa9073,tech_news.csv,447,ART0448,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+53d4ab074efa823a,tech_news.csv,448,ART0449,arr_parse,missing,,,,BATCH_20260809T150235
+405afc0aad86483d,tech_news.csv,449,ART0450,arr_parse,missing,,,,BATCH_20260809T150235
+788843b8413b0b03,tech_news.csv,450,ART0451,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+d0fed71b97c971c3,tech_news.csv,453,ART0454,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+b4720f257a06a013,tech_news.csv,454,ART0455,arr_parse,missing,,,,BATCH_20260809T150235
+1331cab5d7e8b17d,tech_news.csv,461,ART0462,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+0aa06b4999e7e042,tech_news.csv,464,ART0465,arr_parse,missing,,,,BATCH_20260809T150235
+464276b6bacce840,tech_news.csv,466,ART0467,arr_parse,missing,,,,BATCH_20260809T150235
+1101cdc7091e735b,tech_news.csv,468,ART0469,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+bec5dc65d23c98f9,tech_news.csv,473,ART0474,arr_parse,missing,,,,BATCH_20260809T150235
+ee988a7801b2458d,tech_news.csv,477,ART0478,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+e4124225ad53609c,tech_news.csv,483,ART0484,arr_parse,missing,,,,BATCH_20260809T150235
+f78ae934cedfae89,tech_news.csv,485,ART0486,arr_parse,missing,N/A,,,BATCH_20260809T150235
+f4e060be25b19076,tech_news.csv,488,ART0489,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+72c3657586adeeb9,tech_news.csv,493,ART0494,arr_parse,missing,,,,BATCH_20260809T150235
+074389cde376bbe6,tech_news.csv,498,ART0499,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+51d279e7a789581f,tech_news.csv,506,ART0507,arr_parse,missing,,,,BATCH_20260809T150235
+396360305996c51f,tech_news.csv,508,ART0509,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+f26348827f051d3f,tech_news.csv,526,ART0527,arr_parse,missing,N/A,,,BATCH_20260809T150235
+1e7c8dd5fbcdbda6,tech_news.csv,528,ART0529,arr_parse,missing,N/A,,,BATCH_20260809T150235
+8fdf575edba2f64c,tech_news.csv,534,ART0535,arr_parse,missing,N/A,,,BATCH_20260809T150235
+f359f03cdd8b85d3,tech_news.csv,537,ART0538,arr_parse,missing,,,,BATCH_20260809T150235
+43c1dfa4d763850e,tech_news.csv,542,ART0543,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+ef11c049ed8aaf44,tech_news.csv,556,ART0557,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+987c7f7189642658,tech_news.csv,578,ART0579,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+312af308820a1c7e,tech_news.csv,582,ART0583,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+50b68b905b7a536c,tech_news.csv,595,ART0596,arr_parse,missing,N/A,,,BATCH_20260809T150235
+cdd53aad3f796571,tech_news.csv,600,ART0601,arr_parse,missing,N/A,,,BATCH_20260809T150235
+bc79f7cf36fa84af,tech_news.csv,612,ART0613,arr_parse,missing,N/A,,,BATCH_20260809T150235
+436c4a412a26706e,tech_news.csv,629,ART0630,arr_parse,missing,,,,BATCH_20260809T150235
+5aea369bc83e6714,tech_news.csv,639,ART0640,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+bcd37b97a6e124df,tech_news.csv,645,ART0646,arr_parse,missing,N/A,,,BATCH_20260809T150235
+a2711f2864dde746,tech_news.csv,686,ART0687,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+a62c84871fea66b0,tech_news.csv,698,ART0699,arr_parse,missing,N/A,,,BATCH_20260809T150235
+3b27c96e9aca5420,tech_news.csv,705,ART0706,arr_parse,missing,N/A,,,BATCH_20260809T150235
+deb9f38a753f29f4,tech_news.csv,714,ART0715,arr_parse,missing,N/A,,,BATCH_20260809T150235
+4d227074d8784a71,tech_news.csv,720,ART0721,arr_parse,missing,N/A,,,BATCH_20260809T150235
+b887a8b3cd273b20,tech_news.csv,722,ART0723,arr_parse,missing,N/A,,,BATCH_20260809T150235
+e8065b556931eea9,tech_news.csv,724,ART0725,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+d93a0b4cbe3c5ff2,tech_news.csv,738,ART0739,arr_parse,missing,,,,BATCH_20260809T150235
+c3f148d9871298ec,tech_news.csv,741,ART0742,arr_parse,not_disclosed,Not disclosed,,,BATCH_20260809T150235
+8cb80a29650e12ff,tech_news.csv,501,ART0502,company_match,no_match,Mistral AI,,,BATCH_20260809T150235
+33eecc4203fb829e,tech_news.csv,516,ART0517,company_match,no_match,Perplexity AI,,,BATCH_20260809T150235
+6525699534ee7e6e,tech_news.csv,517,ART0518,company_match,no_match,Cohere,,,BATCH_20260809T150235
+27e306e7d825811d,tech_news.csv,535,ART0536,company_match,no_match,Cohere,,,BATCH_20260809T150235
+ce8a02e2b5cd3f62,tech_news.csv,543,ART0544,company_match,no_match,Perplexity AI,,,BATCH_20260809T150235
+d2b05aa78cf3557f,tech_news.csv,544,ART0545,company_match,no_match,xAI,,,BATCH_20260809T150235
+9beafa09fa0e2cb5,tech_news.csv,578,ART0579,company_match,no_match,Cohere,,,BATCH_20260809T150235
+c8ec93019eda06ba,tech_news.csv,594,ART0595,company_match,no_match,Cohere,,,BATCH_20260809T150235
+cb0f333761243c62,tech_news.csv,603,ART0604,company_match,no_match,Cohere,,,BATCH_20260809T150235
+ae79e25005f68b01,tech_news.csv,623,ART0624,company_match,no_match,Hugging Face,,,BATCH_20260809T150235
+420223b18c5b5d18,tech_news.csv,626,ART0627,company_match,no_match,xAI,,,BATCH_20260809T150235
+ee01466ec36985cf,tech_news.csv,629,ART0630,company_match,no_match,xAI,,,BATCH_20260809T150235
+fed423b985cb8045,tech_news.csv,631,ART0632,company_match,no_match,Mistral AI,,,BATCH_20260809T150235
+1323419241135d43,tech_news.csv,640,ART0641,company_match,no_match,Perplexity AI,,,BATCH_20260809T150235
+b41a444dc9d2f90b,tech_news.csv,645,ART0646,company_match,no_match,Hugging Face,,,BATCH_20260809T150235
+073021ea3b5a8c86,tech_news.csv,647,ART0648,company_match,no_match,xAI,,,BATCH_20260809T150235
+4f86e1b0bd1153e7,tech_news.csv,661,ART0662,company_match,no_match,Hugging Face,,,BATCH_20260809T150235
+801b82f68239db56,tech_news.csv,684,ART0685,company_match,no_match,Mistral AI,,,BATCH_20260809T150235
+dcbcccb8e2b55d13,tech_news.csv,687,ART0688,company_match,no_match,Mistral AI,,,BATCH_20260809T150235
+872bcb9add40d530,tech_news.csv,690,ART0691,company_match,no_match,Mistral AI,,,BATCH_20260809T150235
+f25009655e2b8ae3,tech_news.csv,691,ART0692,company_match,no_match,Cohere,,,BATCH_20260809T150235
+02677882304e7d13,tech_news.csv,714,ART0715,company_match,no_match,Cohere,,,BATCH_20260809T150235
+845bb5251d498eb2,tech_news.csv,738,ART0739,company_match,no_match,xAI,,,BATCH_20260809T150235
+abd4ff4222c3cc50,tech_news.csv,748,ART0749,company_match,no_match,xAI,,,BATCH_20260809T150235
+83a76929650d408d,tech_news.csv,749,ART0750,company_match,no_match,Cohere,,,BATCH_20260809T150235

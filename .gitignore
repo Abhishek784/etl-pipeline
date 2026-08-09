@@ -13,8 +13,6 @@ __pycache__/
 
 AGENTS.md
 ARCHITECTURE.md
-requirements.txt
-
 # Mypy
 .mypy_cache/
 
