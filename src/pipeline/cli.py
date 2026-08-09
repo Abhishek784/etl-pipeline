@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -13,6 +14,7 @@ from pipeline.config import (
 )
 from pipeline.exports import export_tables
 from pipeline.config import resolve
+from pipeline.warehouse.loader import load_warehouse
 
 
 @dataclass
@@ -65,12 +67,27 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Tech-news ARR pipeline")
     parser.add_argument("--batch-id", default=None)
     parser.add_argument("--skip-embeddings", action="store_true")
+    parser.add_argument("--skip-warehouse", action="store_true",
+                        help="CSV output only; do not load DuckDB")
     args = parser.parse_args()
 
     result = run_pipeline(args.batch_id, args.skip_embeddings)
     written = export_tables(result.gold_tables, Path("outputs"))
     for name, path in written.items():
         print(f"{name:24} {len(result.gold_tables[name]):>5} rows -> {path}")
+
+    settings   = load_settings()
+    if not args.skip_warehouse:
+        db_path = resolve(settings["paths"]["warehouse"])
+        counts = load_warehouse(
+            result.gold_tables,
+            db_path,
+            resolve("src/pipeline/warehouse/schema.sql"),
+            resolve("src/pipeline/warehouse/views.sql"),
+        )
+        print(f"\nwarehouse -> {db_path}")
+        for name, n in counts.items():
+            print(f"  {name:24} {n:>5} rows")
 
 if __name__ == "__main__":
     main()

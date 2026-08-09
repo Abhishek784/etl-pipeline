@@ -1,9 +1,3 @@
-"""Tests for deterministic key generation.
-
-The cross-process test at the bottom is the important one: it is the
-executable form of the idempotency claim in ARCHITECTURE.md section 4.
-"""
-
 from __future__ import annotations
 
 import os
@@ -105,7 +99,7 @@ class TestRejectsEmptyInput:
 _SUBPROCESS_SNIPPET = """
 import sys
 sys.path.insert(0, {src!r})
-from arr_pipeline.keys import company_key, article_key, arr_observation_key
+from pipeline.keys import company_key, article_key, arr_observation_key
 print(company_key("Snowflake"))
 print(article_key("ART0042"))
 print(arr_observation_key("ART0042"))
@@ -113,24 +107,14 @@ print(arr_observation_key("ART0042"))
 
 
 def test_keys_are_stable_across_processes_and_hash_seeds() -> None:
-    """The core idempotency guarantee.
-
-    Python's hash() builtin is salted per process via PYTHONHASHSEED. If any
-    key derived from it, reruns would produce different surrogate keys and the
-    gold merge would insert duplicates instead of updating. This test runs key
-    generation in a fresh interpreter under an explicit non-default seed and
-    asserts the values are unchanged.
-    """
     src = os.path.join(os.path.dirname(os.path.dirname(__file__)), "src")
     expected = [company_key("Snowflake"), article_key("ART0042"), arr_observation_key("ART0042")]
 
     env = {**os.environ, "PYTHONHASHSEED": "12345"}
     result = subprocess.run(
         [sys.executable, "-c", _SUBPROCESS_SNIPPET.format(src=src)],
-        capture_output=True,
-        text=True,
-        env=env,
-        check=True,
+        capture_output=True, text=True, env=env,
     )
-
+    assert result.returncode == 0, result.stderr
+    assert result.stdout.split() == expected
     assert result.stdout.split() == expected
