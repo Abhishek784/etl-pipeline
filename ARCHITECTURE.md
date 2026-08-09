@@ -7,17 +7,8 @@ Tech-news ARR observation pipeline.
  
 The pipeline ingests synthetic technology-news articles and produces two artefacts:
  
-1. A queryable warehouse model of **company ARR observations over time**.
-2. A **semantic search index** over article text, plus a per-article nearest-neighbour set.
-The single most important framing decision is this: the source `revenue`
-column is **not** a company attribute. Each value is a *claim made by one
-article on one date*. The model therefore treats ARR as an **event**, not a
-property. Every downstream consumer sees the observation, its date, and the
-article it came from — never a bare "Snowflake ARR = $2.31B" divorced from
-provenance.
- 
-This single decision drives the grain, the key strategy, and the refusal to
-materialise a `current_arr` column anywhere.
+1. A queryable data model that tracks company ARR (Annual Recurring Revenue) over time.
+2. A semantic search index that helps find similar articles and stores the nearest related articles for each article.
 
 
 
@@ -40,7 +31,7 @@ materialise a `current_arr` column anywhere.
 ```
 
 
-## 6.5 Implementation status
+## 3. Implementation status
  
 Everything is covered by tests
  
@@ -97,21 +88,6 @@ Great Expectations or dbt tests at layer boundaries:
   observation count per batch alert when they deviate from trailing norms.
   A sudden spike in `not_disclosed` usually means an upstream format change,
   not a change in the world.
-### FX rates
-The fixed multipliers are the exercise's biggest simplification. In production,
-a `dim_fx_rate` table keyed by `(currency, rate_date)` lets each observation
-convert at the rate **as of its published date** — necessary for a time series
-spanning years, since a 2022 EUR figure and a 2024 EUR figure converted at one
-rate are not comparable. `fx_rate_applied` is already on the fact row, so this
-is a lookup change, not a model change.
- 
-### Embeddings at scale
-Batch encode on GPU; persist to a purpose-built vector store (pgvector, Qdrant,
-LanceDB) once brute-force cosine over the full corpus stops being viable —
-around 10⁵–10⁶ articles. Version by `model_name` so a model upgrade is a
-backfill of a new keyed set, not a destructive overwrite. Only articles whose
-`title || summary` hash changed need re-embedding.
- 
 ### Scale path
 750 rows is comfortably pandas. The transforms are all row-wise and free of
 cross-row dependencies, so the port to PySpark is mechanical: the parsers become
@@ -121,7 +97,6 @@ in pure functions with no framework types in their signatures.
  
 ---
  
-
 
 ## 8. Known limitations
  
