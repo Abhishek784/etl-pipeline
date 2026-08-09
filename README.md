@@ -42,23 +42,16 @@ parsed, but **rows that fail parsing survive here**, carrying a status flag.
 This is the layer where "what did we fail on, and why" is answerable in SQL.
  
 **Gold** is the dimensional model, built purely by selection from silver.
-
-
-## The AI export filter
- 
-`(article category is AI/ML **OR** company industry is AI/ML)` AND published
-2022–2024 AND `arr_usd > $50M`.
- 
-**The `OR` is load-bearing.** Of the 118 exported rows, 62 qualify on article
-category alone, 41 on company industry alone, and only 15 on both. Implementing
-either condition without the other loses roughly a third of the result.
- 
-The metadata industry values are counter-intuitive — Anthropic is tagged
-`FinTech`, Tesla `Cloud Computing`, and only NVIDIA, SpaceX and Scale AI carry
-`AI/ML`. The pipeline does **not** "correct" these toward what the company
-names suggest; the metadata file is the stated source of truth for industry.
  
 ---
+## AI Export Filter
+
+Articles are included in the AI export when the **article category is AI/ML OR the company industry is AI/ML**, the article was published between **2022–2024**, and ARR is above **$50M**.
+
+The `OR` condition is important because some articles qualify based on their category, while others qualify based on the company's industry.
+
+The pipeline uses the industry exactly as provided in the company metadata. It does not change or guess the industry based on the company name.
+
 
 
 ## The warehouse
@@ -73,17 +66,8 @@ source data.
  
 Two reporting views are created:
  
-- **`vw_company_arr_latest`** — the most recent observation per company.
-  Tie-break: latest `observed_date`, then the **median** across observations
-  sharing that date. It exposes `observation_count_on_date`, so a contested
-  figure is reported rather than hidden. `DENSE_RANK` is used rather than
-  `ROW_NUMBER` precisely so tied rows both survive the filter.
-- **`vw_company_arr_quarterly`** — one row per company-quarter with an
-  `observation_count`, so a single-article quarter is distinguishable from a
-  well-evidenced one.
-Both are views, never materialised columns. "Latest ARR" is an interpretation,
-not a fact; different consumers may want different tie-break rules, and the
-underlying observations must stay intact for all of them.
+- **`vw_company_arr_latest`** — shows the latest ARR for each company, while keeping track of how many articles reported that value/date. If multiple ARR values exist on the latest date, the median is used to produce a representative value.
+- **`vw_company_arr_quarterly`** — summarizes ARR observations by company and quarter. It also includes the observation count to show how much article evidence exists for that quarter.
  
 ```bash
 make query   
