@@ -1,18 +1,17 @@
 from dataclasses import dataclass
 import math
 
-FX_RATES = {
-    "$": 1.0,
-    "€": 1.10,
-    "£": 1.27,
-    "¥": 1 / 150,
-}
+FX_RATES = {"USD": 1.0, "EUR": 1.10, "GBP": 1.27, "JPY": 1 / 150}
+SYMBOL_TO_ISO = {"$": "USD", "€": "EUR", "£": "GBP", "¥": "JPY"}
 
 @dataclass
 class RevenueParseResult:
     status: str
     arr_usd: int | None
     parse_method: str | None
+    source_currency: str | None      # "USD" | "EUR" | "GBP" | "JPY"
+    fx_rate_applied: float | None
+    currency_inferred: bool
 
 
 def parse_revenue(raw: str):
@@ -22,64 +21,96 @@ def parse_revenue(raw: str):
         return RevenueParseResult(
             status="missing",
             arr_usd=None,
-            parse_method=None
+            parse_method=None,
+            source_currency=None,
+            fx_rate_applied=None,
+            currency_inferred=False 
         )
 
     if isinstance(raw, float) and math.isnan(raw):
         return RevenueParseResult(
             status="missing",
             arr_usd=None,
-            parse_method=None
+            parse_method=None,
+            source_currency=None,
+            fx_rate_applied=None,
+            currency_inferred=False
         )
 
     if isinstance(raw, str) and raw.strip() == "":
         return RevenueParseResult(
             status="missing",
             arr_usd=None,
-            parse_method=None
+            parse_method=None,
+            source_currency=None,
+            fx_rate_applied=None,
+            currency_inferred=False
         )
     
     # Not disclosed values
     if isinstance(raw, str):
         normalized = raw.strip().lower()
 
-        if normalized in {"not disclosed", "n/a"}:
+        if normalized in {"", "n/a", "na", "none", "null", "-"}:
+            return RevenueParseResult(
+                status="missing",
+                arr_usd=None,
+                parse_method=None,
+                source_currency=None,
+                fx_rate_applied=None,
+                currency_inferred=False
+            )   
+
+        if normalized in {"not disclosed", "undisclosed"}:
             return RevenueParseResult(
                 status="not_disclosed",
                 arr_usd=None,
-                parse_method=None
+                parse_method=None,  
+                source_currency=None,
+                fx_rate_applied=None,
+                currency_inferred=False
             )
     try:
         if " - " in raw:
             left, right = raw.split(" - ")
 
-            left_value = parse_single(left)
-            right_value = parse_single(right)
+            left_value,currency = parse_single(left)
+            right_value,currency = parse_single(right)
 
             expected_usd = round((left_value + right_value) / 2)
             method = "range_midpoint"
         else:
-            expected_usd = round(parse_single(raw))
+            expected_usd,currency = parse_single(raw)
+            expected_usd = round(expected_usd)
             method = "single"
         if raw is None:
             return RevenueParseResult(
                 status="missing",
                 arr_usd=None,
-                parse_method="none"
+                parse_method="none",
+                source_currency=None,
+                fx_rate_applied=None,
+                currency_inferred=False
             )
     except Exception:
         return RevenueParseResult(
             status="unparseable",
             arr_usd=None,
-            parse_method=None
+            parse_method=None,
+            source_currency=None,
+            fx_rate_applied=None,
+            currency_inferred=False
         )
     return RevenueParseResult(
         status="ok",
         arr_usd=expected_usd,
-        parse_method=method
+        parse_method=method,
+        source_currency=currency,
+        fx_rate_applied=FX_RATES[currency],
+        currency_inferred=True
     )
 
-def parse_single(value: str) -> float:
+def parse_single(value: str) -> tuple[float,str]:
     value = value.strip()
 
     currency = "$"
@@ -124,5 +155,5 @@ def parse_single(value: str) -> float:
     elif lower.endswith("m"):
         multiplier = 1_000_000
         value = value[:-1].strip()
-
-    return float(value) * multiplier * FX_RATES[currency]
+    iso=SYMBOL_TO_ISO[currency]
+    return float(value) * multiplier * FX_RATES[iso], iso

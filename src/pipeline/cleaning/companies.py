@@ -17,6 +17,7 @@ class CompanyMatch:
     company_name: str | None
     method: str
     score: float | None = None
+    candidate: str | None = None
 
 
 _SUFFIXES = [

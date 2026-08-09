@@ -19,15 +19,18 @@ def test_parses(raw, expected_usd, method):
     assert result.parse_method == method
 
 
-@pytest.mark.parametrize("raw", [None, float("nan"), "", "   "])
+@pytest.mark.parametrize("raw", [None, float("nan"), "", "   ", "N/A", "n/a", "-"])
 def test_missing(raw):
     assert parse_revenue(raw).status == "missing"
     assert parse_revenue(raw).arr_usd is None
 
 
-@pytest.mark.parametrize("raw", ["Not disclosed", "not disclosed", "N/A"])
+@pytest.mark.parametrize("raw", ["Not disclosed", "not disclosed", "  Not Disclosed  "])
 def test_not_disclosed(raw):
-    assert parse_revenue(raw).status == "not_disclosed"
+    result = parse_revenue(raw)
+    assert result.status == "not_disclosed"
+    assert result.arr_usd is None
+
 
 
 def test_garbage_does_not_raise():
@@ -38,4 +41,26 @@ def test_currency_metadata():
     r = parse_revenue("€2,100,000,000")
     assert r.source_currency == "EUR"
     assert r.fx_rate_applied == 1.1
-    assert r.currency_inferred is False
+    assert r.currency_inferred is True
+
+
+
+
+def test_jpy_rate_is_division_not_multiplication():
+    r = parse_revenue("¥300,000,000,000")
+    assert r.source_currency == "JPY"
+    assert r.fx_rate_applied == pytest.approx(1 / 150)
+
+
+def test_range_midpoint_taken_before_conversion():
+    r = parse_revenue("$10.0M - $20.0M")
+    assert r.parse_method == "range_midpoint"
+    assert r.fx_rate_applied == 1.0
+
+
+def test_failure_branches_have_no_currency():
+    for raw in (None, "N/A", "Not disclosed", "about five bucks"):
+        r = parse_revenue(raw)
+        assert r.source_currency is None
+        assert r.fx_rate_applied is None
+        assert r.currency_inferred is False

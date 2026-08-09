@@ -16,8 +16,6 @@ def build_category_lookup(category_map: dict[str, list[str]] ) -> dict[str, str]
     return lookup
 
 
-def standardise_category(raw: str, category_map: dict[str, list[str]],) -> str:
-
-    lookup = build_category_lookup(category_map)
+def standardise_category(raw: str, lookup: dict[str, str],) -> str:
     key = normalise_category(raw)
     return lookup.get(key, "UNKNOWN")

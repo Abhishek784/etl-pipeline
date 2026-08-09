@@ -1,6 +1,7 @@
 from collections import Counter
 import pandas as pd, pytest
 from pipeline.cleaning.dates import detect_family_conventions, parse_date
+from pipeline.cli import run_pipeline
 
 @pytest.fixture(scope="session")
 def all_dates():
@@ -19,3 +20,19 @@ def test_dash_family_is_split(conventions):
 def test_corpus_status_counts(all_dates, conventions):
     c = Counter(parse_date(v, conventions).status for v in all_dates)
     assert c == {"parsed": 684, "ambiguous_resolved": 66}
+
+
+
+#GOLD
+@pytest.fixture(scope="session")
+def pipeline_result():
+    return run_pipeline(batch_id="TEST_BATCH")
+
+@pytest.fixture(scope="session")
+def silver_articles(pipeline_result):
+    return pipeline_result.silver_articles
+
+@pytest.fixture(scope="session")
+def gold_tables(pipeline_result):
+    return pipeline_result.gold_tables
+    

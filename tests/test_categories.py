@@ -1,5 +1,5 @@
 import pytest
-from pipeline.cleaning.categories import standardise_category
+from pipeline.cleaning.categories import standardise_category, build_category_lookup
 
 @pytest.fixture
 def category_map():
@@ -37,6 +37,10 @@ def category_map():
         ],
     }
 
+@pytest.fixture
+def lookup(category_map):
+    return build_category_lookup(category_map)
+
 @pytest.mark.parametrize(
     "raw, expected",
     [
@@ -60,6 +64,17 @@ def category_map():
         ("Enterprise Software", "SOFTWARE"),
     ],
 )
-def test_standardise_category(raw, expected, category_map):
-    result = standardise_category(raw, category_map)
-    assert result == expected
+
+
+def test_standardise_category(raw, expected, lookup):
+    assert standardise_category(raw, lookup) == expected
+
+
+@pytest.mark.parametrize("raw", ["Quantum Computing", "Blockchain", "", None])
+def test_unmapped_returns_unknown(raw, lookup):
+    assert standardise_category(raw, lookup) == "UNKNOWN"
+
+
+@pytest.mark.parametrize("raw", ["ai/ml", "  AI/ML  ", "Ai/Ml"])
+def test_matching_is_case_and_whitespace_insensitive(raw, lookup):
+    assert standardise_category(raw, lookup) == "AI_ML"

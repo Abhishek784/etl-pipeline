@@ -1,13 +1,10 @@
-"""Regression assertions: every count derived from profiling the source files.
-
-If a parser change silently shifts what qualifies, this test says so.
-"""
 from collections import Counter
 
 
 def test_silver_row_count(silver_articles):
     assert len(silver_articles) == 750
     assert silver_articles.article_id.is_unique
+
 
 
 def test_arr_status_distribution(silver_articles):
@@ -17,7 +14,7 @@ def test_arr_status_distribution(silver_articles):
 
 
 def test_arr_parse_methods(silver_articles):
-    ok = silver_articles[silver_articles.arr_status == "ok"]
+    ok = silver_articles[silver_articles.arr_status == "ok"]    
     assert Counter(ok.parse_method) == {"single": 500, "range_midpoint": 58}
 
 
