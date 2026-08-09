@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+from pipeline.cleaning.categories import standardise_category
 from pipeline.cleaning.companies import resolve_company
 import pandas as pd
 from pipeline.cleaning.dates import detect_family_conventions,parse_date
@@ -16,7 +19,7 @@ def _to_none(value):
 
 
 #   silver for company_metadata.json
-def build_silver_companies( df_bronze_companies:pd.Dataframe, category_lookup:dict ) -> pd.Dataframe:
+def build_silver_companies( df_bronze_companies:pd.DataFrame, category_lookup:dict ) -> pd.DataFrame:
     df_silver_companies = df_bronze_companies.copy()
     df_silver_companies = df_silver_companies.map(_to_none)
 
@@ -40,7 +43,9 @@ def build_silver_companies( df_bronze_companies:pd.Dataframe, category_lookup:di
         .astype("boolean")
     )
 
-    df_silver_companies["industry_std"] = ( df_silver_companies["industry"].map(category_lookup))
+    df_silver_companies["industry_std"] = df_silver_companies["industry"].map(
+        lambda x: standardise_category(x, category_lookup)
+    )   
     return df_silver_companies
 
 #   silver for tech_news.csv
@@ -57,7 +62,7 @@ def build_silver_articles(bronze_articles: pd.DataFrame, registry,
     {
         "category_raw": silver["category"],
         "category_std": silver["category"].map(
-            lambda x: category_lookup.get(x)
+            lambda x: standardise_category(x, category_lookup)
         ),
     },
     index=silver.index,
@@ -118,7 +123,7 @@ def date_parsing(silver:pd.DataFrame,conventions:dict):
     )
     date_results = date_results.rename(
         columns={
-            "parsed_date": "published_date",
+            "value": "published_date",
             "status": "date_status",
             "family": "date_family",
             "convention_used": "date_convention_used",

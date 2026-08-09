@@ -1,9 +1,11 @@
+from __future__ import annotations
 import pandas as pd
 from pathlib import Path
 from datetime import datetime,timezone
 import json
 
-def load_bronze_articles(csv_path: Path, batch_id: str) -> pd.Dataframe :
+
+def load_bronze_articles(csv_path: Path, batch_id: str) -> pd.DataFrame :
     df = pd.read_csv(
         csv_path,
         dtype=str,
@@ -16,7 +18,7 @@ def load_bronze_articles(csv_path: Path, batch_id: str) -> pd.Dataframe :
     return df
 
 
-def load_bronze_companies(json_path: Path, batch_id: str) -> pd.Dataframe :
+def load_bronze_companies(json_path: Path, batch_id: str) -> pd.DataFrame :
     with open(json_path, "r", encoding="utf-8") as file:
         raw_data = json.load(file)
 
@@ -30,7 +32,8 @@ def load_bronze_companies(json_path: Path, batch_id: str) -> pd.Dataframe :
 
         rows.append(row)
     df = pd.DataFrame(rows)
-    df = df.astype(str) # preserve source value as str
+    df = df.map(lambda v: None if v is None else str(v))
+    #df = df.astype(str) # preserve source value as str
 
     df["source_file"] = json_path.name
     df["source_row_num"] = range(len(df))

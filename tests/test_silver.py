@@ -1,3 +1,4 @@
+from __future__ import annotations
 from collections import Counter
 import pytest
 from pipeline.layers.bronze import load_bronze_articles
@@ -119,7 +120,7 @@ def test_article_ids_unique(
 
     assert silver.article_id.is_unique
 
-#Test 6 — Revenue Distribution
+# #Test 6 — Revenue Distribution
 # def test_arr_status_distribution(
 #     bronze_data,
 #     registry,
@@ -139,4 +140,29 @@ def test_article_ids_unique(
 #         "ok": 558,
 #         "missing": 107,
 #         "not_disclosed": 85,
+#     }
+
+
+# def test_category_distribution(
+#     bronze_data,
+#     registry,
+#     category_lookup,
+# ):
+#     bronze_articles, _ = bronze_data
+
+#     silver = build_silver_articles(
+#         bronze_articles,
+#         registry,
+#         category_lookup,
+#     )
+
+#     counts = Counter(silver.category_std)
+
+#     assert counts == {
+#         "AI_ML": 161,
+#         "DATA": 153,
+#         "CLOUD": 131,
+#         "SECURITY": 124,
+#         "FINTECH": 104,
+#         "HEALTH": 77,
 #     }
