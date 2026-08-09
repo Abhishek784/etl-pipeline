@@ -2,7 +2,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-import argparse, json
+import argparse
 import pandas as pd
 
 from pipeline.layers import bronze, silver, gold, ai_exports
@@ -12,6 +12,7 @@ from pipeline.config import (
     load_settings, load_category_map, load_company_aliases, load_company_metadata,
 )
 from pipeline.exports import export_tables
+from pipeline.config import resolve
 
 
 @dataclass
@@ -70,7 +71,6 @@ def main() -> None:
     written = export_tables(result.gold_tables, Path("outputs"))
     for name, path in written.items():
         print(f"{name:24} {len(result.gold_tables[name]):>5} rows -> {path}")
-
 
 if __name__ == "__main__":
     main()
